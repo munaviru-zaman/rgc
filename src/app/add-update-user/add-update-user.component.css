@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.container {
+  width: 90%;
+  max-width: 35rem;
+}
+.form {
+  background-color: #fff;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 800;
+  background-image: linear-gradient(#0077ed, #0077ed);
+  /* background-color: #0077ed; */
+  background-size: 10% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding: 1rem 0;
+}
+
+.fields {
+  margin-top: 3rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+input,
+button,
+select {
+  font-size: 1.4rem;
+}
+.btn {
+  width: 40%;
+  background-color: #3068aa;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cancel {
+  color: #000;
+  background-color: #eeeeee;
+}

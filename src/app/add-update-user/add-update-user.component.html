@@ -1,0 +1,68 @@
+<section class="main">
+  <section class="container">
+    <form class="form p-5" [formGroup]="userForm">
+      <h2 class="heading">User Form</h2>
+      <section class="fields">
+        <section class="mb-3 input__container">
+          <label for="userId" class="form-label">User ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userId"
+            placeholder="Enter user id"
+            required
+            formControlName="userId"
+            [(ngModel)]="userId"
+          />
+        </section>
+        <section class="mb-3 input__container">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter user name"
+            required
+            formControlName="name"
+            [(ngModel)]="name"
+          />
+        </section>
+        <section class="mb-3 input__container">
+          <label for="gender" class="form-label">Gender</label>
+          <select
+            class="form-control"
+            id="gender"
+            required
+            formControlName="gender"
+            [(ngModel)]="gender"
+          >
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+        <section class="mb-3 input__container">
+          <label for="contact" class="form-label">Contact</label>
+          <input
+            type="number"
+            class="form-control"
+            id="name"
+            placeholder="Enter mobile number"
+            required
+            formControlName="contact"
+            [(ngModel)]="contact"
+          />
+        </section>
+        <section class="btns d-flex justify-content-between mt-5">
+          <button type="cancel" (click)="cancel()" class="btn cancel">
+            Cancel
+          </button>
+          <button type="submit" (click)="submit(userForm.value)" class="btn">
+            Submit
+          </button>
+        </section>
+      </section>
+    </form>
+  </section>
+</section>

@@ -1,0 +1,83 @@
+<section class="container-fluid">
+  <div class="row header-body"><p>Dashboard</p></div>
+  <div class="row my-2">
+    <div class="col-md-4">
+      <div class="card card-hover px-3 mb-4">
+        <div
+          class="card-body d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex flex-column">
+            <h5 class="card-title">Total Users</h5>
+            <div class="data">{{ totalUsers }}</div>
+          </div>
+          <img src="/assets/statistics.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-hover px-3 mb-4">
+        <div
+          class="card-body d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex flex-column">
+            <h5 class="card-title">Active Users</h5>
+            <div class="data">36</div>
+          </div>
+          <img src="/assets/statistics.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-hover px-3 mb-4">
+        <div
+          class="card-body d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex flex-column">
+            <h5 class="card-title">New Users</h5>
+            <div class="data">36</div>
+          </div>
+          <img src="/assets/statistics.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row table__header"><p>User Table</p></div>
+  <div class="row table__container">
+    <div class="col-md-12">
+      <div class="table-responsive table-fixed-header">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">SI No</th>
+              <th scope="col">User Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Contact</th>
+              <th scope="col">action</th>
+            </tr>
+          </thead>
+          <tr *ngIf="userList?.length === 0">
+            No Data
+          </tr>
+          <tbody *ngFor="let data of userList; let i = index">
+            <tr>
+              <td scope="row">{{ i + 1 }}</td>
+              <td>{{ data.userId }}</td>
+              <td>{{ data.name }}</td>
+              <td>{{ data.gender }}</td>
+              <td>{{ data.contact }}</td>
+              <td>
+                <button class="btn" (click)="updateUser(i)">
+                  <span class="material-icons-round"> border_color </span>
+                </button>
+                <button class="btn" (click)="deleteUser(i)">
+                  <span class="material-icons-round"> delete </span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

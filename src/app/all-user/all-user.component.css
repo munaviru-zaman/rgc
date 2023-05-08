@@ -1,0 +1,62 @@
+.header-body {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.card-hover {
+  border: none;
+  transition: all 400ms ease;
+  box-shadow: 0.4px 1.3px 5.3px rgba(0, 0, 0, 0.015),
+    1.3px 4.5px 17.9px rgba(0, 0, 0, 0.022), 6px 20px 80px rgba(0, 0, 0, 0.04);
+}
+.card-hover:hover {
+  transform: translateY(-1rem) scale(1.03);
+}
+.card-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+img {
+  width: 5rem;
+}
+.data {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.card-header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 1rem 1rem;
+}
+
+table {
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  table-layout: fixed;
+}
+.table-fixed-header {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+.table__header {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+thead {
+  background-color: #3068aa;
+  color: #fff;
+}
+
+th {
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  background-color: #3068aa;
+}
+th,
+td {
+  padding: 1rem 2rem;
+}

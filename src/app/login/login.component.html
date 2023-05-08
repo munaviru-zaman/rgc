@@ -1,0 +1,39 @@
+<section class="main">
+  <section class="container">
+    <form
+      class="form"
+      [formGroup]="loginForm"
+      (ngSubmit)="login(loginForm.value)"
+    >
+      <section class="svg">
+        <img src="../../assets/svg__circles.png" alt="" />
+      </section>
+      <section class="fields">
+        <h2 class="heading mb-5">Login</h2>
+        <section class="mb-3 input__container">
+          <label for="userId" class="form-label">User ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userId"
+            placeholder="User Id"
+            required
+            formControlName="userId"
+          />
+        </section>
+        <section class="mb-5 input__container">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+            required
+            formControlName="password"
+          />
+        </section>
+        <button type="submit" class="btn">Login</button>
+      </section>
+    </form>
+  </section>
+</section>

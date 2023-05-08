@@ -1,0 +1,94 @@
+<!-- navbar -->
+<nav
+  class="navbar navbar navbar-expand-lg bg-body-tertiary bg-white nav fixed-top"
+>
+  <div class="container-fluid">
+    <button
+      class="btn btn-primary navbar-toggler me-2"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas"
+      aria-controls="offcanvasExample"
+    >
+      <span class="navbar-toggler-icon" data-bs-target="#offcanvas"></span>
+    </button>
+    <a class="navbar-brand brand me-auto" href="#">
+      <img src="../../assets/svg__circles.png" alt="" />
+      My Company</a
+    >
+
+    <div class="dropdown">
+      <a
+        class="dropdown-toggle profile__drop"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      >
+        <i class="bi bi-person-fill"></i>
+      </a>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar -->
+
+<!-- offcanvas -->
+
+<div
+  class="offcanvas offcanvas-start side__nav d-flex justify-content-center align-items-center flex-column"
+  data-bs-backdrop="false"
+  tabindex="-1"
+  id="offcanvas"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <button
+    type="button"
+    class="btn-close close__toggle"
+    data-bs-dismiss="offcanvas"
+    aria-label="Close"
+  ></button>
+  <div class="offcanvas-body">
+    <nav class="navbar">
+      <ul
+        class="nav__list navbar-nav d-flex justify-content-start align-items-start"
+      >
+        <li class="mb-3">
+          <a class="nav-link d-flex" [routerLink]="['user']"
+            ><span class="me-3"
+              ><span class="material-icons-round"> grid_view </span>
+            </span>
+            <span>Dashboard</span></a
+          >
+        </li>
+        <li class="mb-3">
+          <a class="nav-link d-flex" [routerLink]="['add/update']"
+            ><span class="me-3"
+              ><span class="material-icons-round"> person_add </span>
+            </span>
+            <span>Add User</span></a
+          >
+        </li>
+        <li class="mb-3">
+          <a class="nav-link d-flex" (click)="logout()"
+            ><span class="me-3"
+              ><span class="material-icons-round"> logout </span>
+            </span>
+            <span>Logout</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!-- offcanvas -->
+<main class="main p-3">
+  <router-outlet></router-outlet>
+</main>
