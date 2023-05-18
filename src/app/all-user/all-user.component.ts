@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AllUserComponent implements OnInit {
   userList: any;
   totalUsers: any;
+
   constructor(private service: UtilityService, private router: Router) {}
 
   ngOnInit(): void {
